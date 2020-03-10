@@ -1,0 +1,34 @@
+#pragma once
+
+enum SocketType
+{
+	MAIN_SERVER = 0x00,
+	VIDEO_SERVER,
+	AUDIO_SERVER,
+	UIBC_SERVER
+};
+
+enum TouchType
+{
+	TT_LMOUSE_CLICK = 0x00,
+	TT_LMOUSE_DOUBLE = 0x01,
+	TT_RMOUSE_CLICK = 0x02,
+	TT_LMOUSE_DOWN = 0x03,
+	TT_MOUSE_MOVE = 0x04,
+	TT_LMOUSE_UP = 0x05,
+	TT_WHEEL_FORWARD = 0x06,
+	TT_WHEEL_BACKWARD = 0x07
+};
+
+#define MAINCHANNEL_PORT		20000
+#define TCP_VIDEO_SERVER_PORT	20010
+#define TCP_AUDIO_SERVER_PORT	20011
+#define TCP_UIBC_SERVER_PORT	20100
+
+#define USE_8_BYTES_FOR_LEN 1
+
+#define SAMPLE_RATE		44100	//44.1khz
+#define NUM_CHANNELS	2		//stereo
+#define SAMPLE_BIT		16
+#define SAFE_DELETE_ARRAY(a) { delete[] a; }
+#define SAFE_DELETE(a) { delete a; a = NULL; }
